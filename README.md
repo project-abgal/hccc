@@ -1,4 +1,6 @@
 # Handwritten Cuneiform Character Collection
+[![DOI](https://zenodo.org/badge/115259052.svg)](https://zenodo.org/badge/latestdoi/115259052)
+
 
 ## About
 
