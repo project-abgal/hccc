@@ -1,0 +1,32 @@
+{% extends "bootstrap/base.html" %}
+{% block body %}
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="/">HCC Identifier</a>
+</nav>
+<div class="container">
+    <div class="row">
+        <div class="col-lg">
+            {% if predict %}
+                <p>予測結果</p>
+                <img src="{{image_text}}">
+                <div>Predict: {{predict}}</div>
+            {% endif %}
+        </div>
+        <div class="col-lg">
+            <form action="/" method="POST" enctype="multipart/form-data">
+                <p>認識させる画像を選択し、アップロードしてください</p>
+                <div class="form-group">
+                    <label for="hcc-image">HCC Image</label>
+                    <input type="file" class="form-control-file" id="hcc-image" name="hcc_image">
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="upload" class="btn btn-primary">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
